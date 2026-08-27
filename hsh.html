@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPBR Store - متجر بونتي راش</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .bg-opbr-dark { background-color: #0b0e14; }
+        .bg-opbr-card { background-color: #151a23; }
+        .text-gold { color: #f59e0b; }
+        .border-gold { border-color: #f59e0b; }
+    </style>
+</head>
+<body class="bg-opbr-dark text-gray-100 min-h-screen flex flex-col">
+
+    <header class="bg-opbr-card border-b border-gray-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-yellow-500 rounded-lg flex items-center justify-center font-black text-black text-2xl shadow-lg shadow-yellow-500/20">
+                    BR
+                </div>
+                <span class="text-xl font-bold tracking-wider text-white">OPBR <span class="text-yellow-500">STORE</span></span>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-gray-300">
+                <a href="#" class="text-yellow-500 transition">الرئيسية</a>
+                <a href="#accounts" class="hover:text-yellow-500 transition">الحسابات المتاحة</a>
+                <a href="#ex-characters" class="hover:text-yellow-500 transition">شخصيات EX</a>
+                <a href="#reviews" class="hover:text-yellow-500 transition">آراء العملاء</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="https://t.me/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2.5 rounded-xl flex items-center gap-2 transition shadow-lg shadow-blue-600/30">
+                    <i class="fa-brands font-semibold text-lg"></i>
+                    <span>تواصل معنا</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative bg-gradient-to-b from-opbr-card to-opbr-dark py-16 px-4 sm:px-6 lg:px-8 border-b border-gray-800/50">
+        <div class="max-w-7xl mx-auto text-center space-y-6">
+            <span class="bg-yellow-500/10 text-yellow-500 border border-yellow-500/20 text-xs font-bold px-4 py-1.5 rounded-full inline-block uppercase">
+                أقوى حسابات ون بيس بونتي راش
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black text-white leading-tight">
+                احصل على حساب <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-600">أحلامك اليوم</span>
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">
+                تشكيلة واسعة من حسابات الـ EX والـ Hyperboost بأفضل الأسعار وبضمان كامل لعملية التسليم.
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-6">
+                <div class="bg-opbr-card p-4 rounded-xl border border-gray-800">
+                    <div class="text-2xl font-bold text-yellow-500">+500</div>
+                    <div class="text-xs text-gray-400">حساب مباع</div>
+                </div>
+                <div class="bg-opbr-card p-4 rounded-xl border border-gray-800">
+                    <div class="text-2xl font-bold text-yellow-500">100%</div>
+                    <div class="text-xs text-gray-400">ضمان وأمان</div>
+                </div>
+                <div class="bg-opbr-card p-4 rounded-xl border border-gray-800">
+                    <div class="text-2xl font-bold text-yellow-500">24/7</div>
+                    <div class="text-xs text-gray-400">دعم فني مستمر</div>
+                </div>
+                <div class="bg-opbr-card p-4 rounded-xl border border-gray-800">
+                    <div class="text-2xl font-bold text-yellow-500">Instant</div>
+                    <div class="text-xs text-gray-400">تسليم فوري</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="accounts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1 w-full">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+            <div>
+                <h2 class="text-2xl md:text-3xl font-bold text-white">العروض الحالية</h2>
+                <p class="text-gray-400 text-sm">اختر الحساب المناسب لك واضغط على التفاصيل</p>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+                <button class="bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg text-sm">الكل</button>
+                <button class="bg-opbr-card hover:bg-gray-800 text-gray-300 font-semibold px-4 py-2 rounded-lg text-sm border border-gray-800">حسابات EX</button>
+                <button class="bg-opbr-card hover:bg-gray-800 text-gray-300 font-semibold px-4 py-2 rounded-lg text-sm border border-gray-800">حسابات تجميع (Reroll)</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="bg-opbr-card rounded-2xl border border-gray-800 overflow-hidden hover:border-yellow-500/50 transition duration-300 flex flex-col">
+                <div class="relative h-48 bg-gray-900 overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400/1e293b/ffffff?text=OPBR+Account+1" alt="Account Preview" class="w-full h-full object-cover">
+                    <span class="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                        3x EX
+                    </span>
+                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-yellow-400 text-xs font-bold px-3 py-1 rounded-full border border-yellow-500/30">
+                        Rank 45
+                    </span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">حساب لوفي الجير 5 + زورو + نيكا</h3>
+                        <ul class="text-sm text-gray-400 space-y-1.5 mb-4">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> <span>شخصيات الـ EX: G5 Luffy, EX Zoro, Klaw</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> <span>جواهر: 450+ Rainbow Diamonds</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> <span>نسبة الدعم (Support): 155%</span></li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-gray-800 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-500 block">السعر</span>
+                            <span class="text-2xl font-black text-yellow-500">$45</span>
+                        </div>
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-5 py-2.5 rounded-xl transition text-sm flex items-center gap-2">
+                            <span>شراء الآن</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-opbr-card rounded-2xl border border-gray-800 overflow-hidden hover:border-yellow-500/50 transition duration-300 flex flex-col">
+                <div class="relative h-48 bg-gray-900 overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400/1e293b/ffffff?text=OPBR+Account+2" alt="Account Preview" class="w-full h-full object-cover">
+                    <span class="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                        2x EX
+                    </span>
+                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-yellow-400 text-xs font-bold px-3 py-1 rounded-full border border-yellow-500/30">
+                        Rank 28
+                    </span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">حساب روجر + شانكس كامل المهارات</h3>
+                        <ul class="text-sm text-gray-400 space-y-1.5 mb-4">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> <span>شخصيات الـ EX: Gol D. Roger, FR Shanks</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> <span>مداليات جاهزة 9 نجووم</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> <span>ربط آمن 100% (Transfer Code)</span></li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-gray-800 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-500 block">السعر</span>
+                            <span class="text-2xl font-black text-yellow-500">$30</span>
+                        </div>
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-5 py-2.5 rounded-xl transition text-sm flex items-center gap-2">
+                            <span>شراء الآن</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-opbr-card rounded-2xl border border-gray-800 overflow-hidden hover:border-yellow-500/50 transition duration-300 flex flex-col">
+                <div class="relative h-48 bg-gray-900 overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400/1e293b/ffffff?text=OPBR+Account+3" alt="Account Preview" class="w-full h-full object-cover">
+                    <span class="absolute top-3 right-3 bg-yellow-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow">
+                        Reroll Starter
+                    </span>
+                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-yellow-400 text-xs font-bold px-3 py-1 rounded-full border border-yellow-500/30">
+                        Rank 1
+                    </span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">حساب بداية: 5000+ جوهرة + مواد تطوير</h3>
+                        <ul class="text-sm text-gray-400 space-y-1.5 mb-4">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> <span>5,000+ Rainbow Diamonds</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> <span>400+ Golden Fragments (4-Star)</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> <span>متاح للأندرويد و iOS</span></li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-gray-800 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-500 block">السعر</span>
+                            <span class="text-2xl font-black text-yellow-500">$15</span>
+                        </div>
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-5 py-2.5 rounded-xl transition text-sm flex items-center gap-2">
+                            <span>شراء الآن</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-opbr-card border-t border-gray-800 py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm space-y-4">
+            <div class="flex justify-center gap-6 text-gray-400">
+                <a href="#" class="hover:text-yellow-500 transition"><i class="fa-brands fa-telegram text-xl"></i></a>
+                <a href="#" class="hover:text-yellow-500 transition"><i class="fa-brands fa-discord text-xl"></i></a>
+                <a href="#" class="hover:text-yellow-500 transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+            </div>
+            <p>© 2026 OPBR STORE - جميع الحقوق محفوظة. هذا الموقع غير تابع لـ Bandai Namco.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
