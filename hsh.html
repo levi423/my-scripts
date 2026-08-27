@@ -1,0 +1,84 @@
+<!-- ========================================== -->
+<!-- Modal: إرسال حساب للبيع - متجر ليفاي      -->
+<!-- ========================================== -->
+<div id="sellAccountModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    
+    <!-- Modal Container -->
+    <div class="bg-slate-900 border border-indigo-500/30 rounded-2xl w-full max-w-2xl overflow-hidden shadow-2xl text-slate-100 animate-fade-in">
+        
+        <!-- Header -->
+        <div class="bg-slate-950 px-6 py-4 border-b border-indigo-500/20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 shadow-inner">
+                    <i class="fas fa-store text-lg"></i>
+                </div>
+                <div>
+                    <h3 class="text-base font-black text-white tracking-wide">متجر ليفاي | Levi Store</h3>
+                    <p class="text-xs text-indigo-400 font-medium">تقديم طلب عرض حساب جديد للبيع</p>
+                </div>
+            </div>
+            <button type="button" onclick="closeModal('sellAccountModal')" class="w-8 h-8 rounded-lg bg-slate-800/50 text-slate-400 hover:text-white hover:bg-slate-800 transition-colors flex items-center justify-center">
+                <i class="fas fa-times text-base"></i>
+            </button>
+        </div>
+
+        <!-- Body Content -->
+        <div class="p-6 space-y-5 max-h-[80vh] overflow-y-auto custom-scrollbar">
+            
+            <!-- Alert Info Box -->
+            <div class="bg-indigo-950/40 border border-indigo-500/30 rounded-xl p-4 flex gap-3 items-start">
+                <i class="fas fa-shield-halved text-indigo-400 text-lg mt-0.5 shrink-0"></i>
+                <div class="text-xs text-slate-300 leading-relaxed">
+                    <p class="font-bold text-indigo-300 mb-1">تعليمات العرض في متجر ليفاي:</p>
+                    <p>بعد الضغط على "إرسال طلب العرض"، سيتم تحويلك مباشرةً إلى الدعم الفني عبر واتساب لإرسال صور ومواصفات الحساب، وتأكيد بيانات العرض لبدء عملية النشر.</p>
+                </div>
+            </div>
+
+            <!-- Form Section -->
+            <form id="leviSellForm" class="space-y-4">
+                
+                <!-- Game Name Input -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 mb-1.5">اسم اللعبة / نوع الحساب</label>
+                    <input type="text" id="gameName" placeholder="مثال: ببجي موبايل / بيس / ون بيس / فري فاير" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors" required />
+                </div>
+
+                <!-- Price and Link Type Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1.5">السعر المطلوب (بالجنيه / الدولار)</label>
+                        <input type="number" id="accountPrice" placeholder="أدخل السعر" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors" required />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1.5">طريقة الربط (Login Type)</label>
+                        <input type="text" id="loginType" placeholder="مثال: تويتر / جوميل / داخلي" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors" required />
+                    </div>
+                </div>
+
+                <!-- Description Textarea -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 mb-1.5">وصف ومواصفات الحساب</label>
+                    <textarea id="accountDesc" rows="3" placeholder="اكتب أهم العناصر، السكنات، والمميزات بالتفصيل..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors resize-none" required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="button" onclick="submitLeviAccount()" class="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-black py-3.5 rounded-xl text-xs transition-all shadow-lg shadow-indigo-600/20 active:scale-95 flex items-center justify-center gap-2">
+                    <i class="fas fa-paper-plane"></i> إرسال طلب عرض الحساب
+                </button>
+            </form>
+
+            <!-- Rules Box -->
+            <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-4 space-y-2">
+                <h4 class="text-xs font-bold text-indigo-400 flex items-center gap-2">
+                    <i class="fas fa-check-circle"></i> شروط ومعايير القبول في متجر ليفاي
+                </h4>
+                <ul class="text-[11px] text-slate-400 space-y-1.5 list-disc list-inside leading-relaxed">
+                    <li>أن يكون البائع هو المالك الأصلي والحقيقي للحساب.</li>
+                    <li>توفير صور واضحة وكافية تثبت ملحقات وقوة الحساب.</li>
+                    <li>التعهد التام بعدم محاولة استرجاع الحساب بعد إتمام البيع.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
