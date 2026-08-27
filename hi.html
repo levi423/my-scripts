@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OPBR VIP STORE - المتجر الملكي لبونتي راش</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #06080d;
+            color: #ffffff;
+            line-height: 1.4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(245, 158, 11, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.08) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        /* Glass Panel Container */
+        .glass-panel {
+            background: rgba(13, 17, 26, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        /* Header Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.15);
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo-icon {
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(135deg, #fbbf24, #d97706);
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            color: #000;
+            font-size: 0.95rem;
+            box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
+            flex-shrink: 0;
+        }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .logo-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 0.95rem;
+            line-height: 1;
+        }
+        .text-gold {
+            color: #f59e0b;
+        }
+        .logo-subtitle {
+            font-size: 0.5rem;
+            color: #9ca3af;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- الأزرار الاحترافية الفخمة --- */
+        
+        /* زر ذهبي VIP ملكي */
+        .btn-vip {
+            position: relative;
+            background: linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #b45309 100%);
+            color: #000;
+            font-weight: 800;
+            padding: 7px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.72rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            transition: all 0.2s ease;
+            overflow: hidden;
+        }
+        .btn-vip:active {
+            transform: scale(0.96);
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
+        }
+
+        /* زر التفاصيل الزجاجي الاحترافي */
+        .btn-glass {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+            color: #e5e7eb;
+            font-weight: 700;
+            padding: 7px 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 0.7rem;
+            cursor: pointer;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+        }
+        .btn-glass:active {
+            transform: scale(0.96);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Main Content Layout */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 10px;
+            flex: 1;
+            width: 100%;
+        }
+
+        .section-header {
+            padding: 12px 14px;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            text-align: center;
+            background: rgba(13, 17, 26, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .section-title {
+            font-size: 1rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        /* Grid System */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 12px;
+        }
+
+        /* Card Styling */
+        .card {
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .card-badges {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 10;
+            display: flex;
+            gap: 4px;
+        }
+        .badge-red {
+            background: linear-gradient(135deg, #ef4444, #991b1b);
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.55rem;
+            padding: 2px 7px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+        }
+        .badge-gold {
+            background: linear-gradient(135deg, #fbbf24, #d97706);
+            color: #000;
+            font-weight: 800;
+            font-size: 0.55rem;
+            padding: 2px 7px;
+            border-radius: 6px;
+        }
+        .badge-rank {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            font-weight: 700;
+            font-size: 0.55rem;
+            padding: 2px 7px;
+            border-radius: 6px;
+        }
+
+        .card-img-wrap {
+            height: 140px;
+            background: #0b0e14;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-img-wrap svg {
+            width: 100%;
+            height: 100%;
+        }
+        .card-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(13, 17, 26, 0.95), transparent 60%);
+        }
+
+        .card-body {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+            gap: 12px;
+        }
+        .card-code {
+            font-size: 0.65rem;
+            color: #9ca3af;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            line-height: 1.35;
+            color: #f3f4f6;
+        }
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 6px;
+        }
+        .tag {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: #9ca3af;
+            font-size: 0.6rem;
+            padding: 2px 6px;
+            border-radius: 5px;
+        }
+
+        .card-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .price-box {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+        .price-main {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: #f59e0b;
+        }
+        .price-old {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            color: #6b7280;
+            text-decoration: line-through;
+        }
+
+        .card-actions {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 6px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            padding: 14px;
+            text-align: center;
+            font-size: 0.65rem;
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="glass-panel">
+        <div class="header-container">
+            <div class="logo-box">
+                <div class="logo-icon">OP</div>
+                <div class="logo-text">
+                    <span class="logo-title">OPBR<span class="text-gold">.VIP</span></span>
+                    <span class="logo-subtitle">OFFICIAL STORE</span>
+                </div>
+            </div>
+
+            <a href="https://t.me/" target="_blank" class="btn-vip">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <span>الدعم الفني</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <div class="glass-panel section-header">
+            <h2 class="section-title">
+                <span class="text-gold">🔥</span>
+                <span>معرض الحسابات الجاهزة للبيع</span>
+            </h2>
+            <p style="font-size: 0.65rem; color: #9ca3af; margin-top: 2px;">تصفح أقوى الحسابات المتاحة مع نقل ملكية آمن 100%</p>
+        </div>
+
+        <div class="cards-grid">
+            
+            <!-- Card 1 -->
+            <div class="glass-panel card">
+                <div class="card-badges">
+                    <span class="badge-red">4x EX</span>
+                    <span class="badge-rank">RANK 68</span>
+                </div>
+                <div class="card-img-wrap">
+                    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#0b0e14"/>
+                        <circle cx="300" cy="200" r="100" fill="#f59e0b" opacity="0.12"/>
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'Orbitron', sans-serif" font-weight="900" font-size="24" fill="#fbbf24">OPBR LUFFY G5</text>
+                    </svg>
+                    <div class="card-img-overlay"></div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <div class="card-code">
+                            <span>كود الحساب: <strong style="color:#fff;">#OP-9082</strong></span>
+                            <span style="color:#34d399; font-weight:700;">✔ جاهز</span>
+                        </div>
+                        <h3 class="card-title" style="margin-top: 4px;">حساب أسطوري: لوفي نيكا G5 + روجر + زورو الـ EX + كيد ولاو</h3>
+                        <div class="card-tags">
+                            <span class="tag">HB 34</span>
+                            <span class="tag">دعم أحمر 162%</span>
+                            <span class="tag">Diamond +750</span>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div>
+                            <span style="font-size: 0.55rem; color: #9ca3af; display: block;">السعر النهائي</span>
+                            <div class="price-box">
+                                <span class="price-main">$85</span>
+                                <span class="price-old">$110</span>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button onclick="alert('كود الحساب هو: OP-9082')" class="btn-glass">
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                                <span>التفاصيل</span>
+                            </button>
+                            <a href="https://t.me/" target="_blank" class="btn-vip">
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                <span>شراء الآن</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="glass-panel card">
+                <div class="card-badges">
+                    <span class="badge-gold">REROLL STARTER</span>
+                    <span class="badge-rank">RANK 1</span>
+                </div>
+                <div class="card-img-wrap">
+                    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#0b0e14"/>
+                        <circle cx="300" cy="200" r="100" fill="#8b5cf6" opacity="0.12"/>
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'Orbitron', sans-serif" font-weight="900" font-size="24" fill="#8b5cf6">5000+ DIAMONDS</text>
+                    </svg>
+                    <div class="card-img-overlay"></div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <div class="card-code">
+                            <span>كود الحساب: <strong style="color:#fff;">#RD-4011</strong></span>
+                            <span style="color:#34d399; font-weight:700;">✔ جاهز</span>
+                        </div>
+                        <h3 class="card-title" style="margin-top: 4px;">حساب تجميع ريرول: 5200+ جوهرة + 500 فراغمنت ذهبي</h3>
+                        <div class="card-tags">
+                            <span class="tag">Fresh Solo</span>
+                            <span class="tag">Android / iOS</span>
+                            <span class="tag">5,200+ Diamonds</span>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div>
+                            <span style="font-size: 0.55rem; color: #9ca3af; display: block;">السعر النهائي</span>
+                            <div class="price-box">
+                                <span class="price-main">$22</span>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button onclick="alert('كود الحساب هو: RD-4011')" class="btn-glass">
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                                <span>التفاصيل</span>
+                            </button>
+                            <a href="https://t.me/" target="_blank" class="btn-vip">
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                <span>شراء الآن</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-panel">
+        <p>© 2026 OPBR VIP STORE. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
