@@ -27,12 +27,11 @@
             background-attachment: fixed;
         }
 
-        /* Glass Panel */
+        /* Glass Header */
         .glass-header {
-            background: rgba(10, 12, 18, 0.9);
+            background: rgba(10, 12, 18, 0.95);
             backdrop-filter: blur(16px);
-            border-bottom: 2px solid opacity;
-            border-image: linear-gradient(90deg, transparent, #f59e0b, transparent) 1;
+            border-bottom: 2px solid rgba(245, 158, 11, 0.3);
             position: sticky;
             top: 0;
             z-index: 50;
@@ -41,7 +40,7 @@
         .header-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 12px 14px;
+            padding: 10px 14px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -54,8 +53,8 @@
         }
 
         .logo-icon {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             background: linear-gradient(135deg, #ffb703, #fb8500);
             clip-path: polygon(20% 0%, 100% 0, 100% 80%, 80% 100%, 0 100%, 0% 20%);
             display: flex;
@@ -64,112 +63,152 @@
             font-family: 'Orbitron', sans-serif;
             font-weight: 900;
             color: #000;
-            font-size: 1.1rem;
-            box-shadow: 0 0 20px rgba(251, 133, 0, 0.6);
+            font-size: 1rem;
+            box-shadow: 0 0 15px rgba(251, 133, 0, 0.5);
         }
 
         .logo-title {
             font-family: 'Orbitron', sans-serif;
             font-weight: 900;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
+            font-size: 1rem;
             background: linear-gradient(to right, #fff, #f59e0b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* ===================================
-           🔥 الأزرار الجبارة (CYBER ULTRA BUTTONS)
-           =================================== */
+        /* Navigation Menu (الأقسام) */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 4px 8px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
 
-        /* زر الشراء الرئيسي - توهج نيون مع شفرة مائلة */
-        .btn-cyber-buy {
+        .nav-link {
+            color: #94a3b8;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.75rem;
+            padding: 5px 10px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .nav-link.active, .nav-link:hover {
+            color: #fff;
+            background: rgba(245, 158, 11, 0.2);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+        }
+
+        /* زر الأدمن الفخم */
+        .btn-admin {
             position: relative;
             background: linear-gradient(135deg, #ff9e00 0%, #e85d04 100%);
             color: #000 !important;
-            font-family: 'Tajawal', sans-serif;
             font-weight: 900;
-            font-size: 0.85rem;
-            padding: 10px 16px;
-            clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+            font-size: 0.75rem;
+            padding: 7px 12px;
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            text-decoration: none;
+            box-shadow: 0 0 15px rgba(232, 93, 4, 0.5);
+        }
+        .btn-admin:active {
+            transform: scale(0.95);
+        }
+
+        /* الأزرار داخل البطاقات */
+        .btn-cyber-buy {
+            background: linear-gradient(135deg, #ff9e00 0%, #e85d04 100%);
+            color: #000 !important;
+            font-weight: 900;
+            font-size: 0.8rem;
+            padding: 8px 12px;
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
             border: none;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 4px;
             text-decoration: none;
-            box-shadow: 0 0 25px rgba(232, 93, 4, 0.6);
-            transition: all 0.15s ease-in-out;
-            text-transform: uppercase;
         }
 
-        .btn-cyber-buy:active {
-            transform: scale(0.95);
-            box-shadow: 0 0 35px rgba(255, 158, 0, 0.9);
-            filter: brightness(1.2);
-        }
-
-        /* زر التفاصيل الهولوجرام الشفاف */
         .btn-cyber-info {
-            position: relative;
             background: rgba(18, 24, 38, 0.8);
             color: #38bdf8;
-            font-family: 'Tajawal', sans-serif;
             font-weight: 900;
-            font-size: 0.8rem;
-            padding: 9px 14px;
-            clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+            font-size: 0.75rem;
+            padding: 8px 10px;
+            clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
             border: 1px solid rgba(56, 189, 248, 0.4);
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 5px;
-            box-shadow: inset 0 0 12px rgba(56, 189, 248, 0.15);
-            transition: all 0.15s ease-in-out;
+            gap: 4px;
         }
-
-        .btn-cyber-info:active {
-            transform: scale(0.95);
-            background: rgba(56, 189, 248, 0.2);
-            color: #fff;
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
-        }
-
-        /* =================================== */
 
         main {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 16px 12px;
+            padding: 14px 10px;
             flex: 1;
             width: 100%;
         }
 
-        .section-banner {
-            background: linear-gradient(90deg, rgba(245, 158, 11, 0.1), rgba(0,0,0,0));
-            border-right: 4px solid #f59e0b;
-            padding: 12px 16px;
+        /* ====================================
+           🖼️ مكان مخصص للصور والبانرات (Banner Slot)
+           يمكنك إضافة/تعديل الصورة هنا بسهولة
+           ==================================== */
+        .custom-banner-slot {
+            width: 100%;
+            background: #090d14;
+            border: 1px dashed rgba(245, 158, 11, 0.3);
+            border-radius: 12px;
             margin-bottom: 20px;
-            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        .custom-banner-slot img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        .banner-text-fallback {
+            padding: 15px;
+            text-align: center;
+            background: linear-gradient(90deg, rgba(245, 158, 11, 0.1), rgba(0,0,0,0));
+        }
+
+        /* Sections Header */
+        .section-banner {
+            border-right: 4px solid #f59e0b;
+            padding: 8px 12px;
+            margin-bottom: 14px;
+            background: rgba(255, 255, 255, 0.02);
         }
 
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 14px;
         }
 
-        /* Card VIP Style */
         .cyber-card {
             background: #090d14;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
+            border-radius: 14px;
             overflow: hidden;
             position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-            transition: transform 0.2s;
         }
 
         .card-tag-head {
@@ -177,36 +216,32 @@
             top: 10px;
             right: 10px;
             z-index: 10;
-            display: flex;
-            gap: 6px;
         }
 
         .badge-ex {
             background: #dc2626;
             color: #fff;
             font-weight: 900;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             padding: 3px 8px;
             clip-path: polygon(6px 0, 100% 0, 100% 100%, 0 100%, 0 6px);
-            box-shadow: 0 0 12px rgba(220, 38, 38, 0.6);
         }
 
         .card-img-holder {
-            height: 150px;
+            height: 140px;
             background: #0d131f;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .card-content {
-            padding: 14px;
+            padding: 12px;
         }
 
         .account-code {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: #64748b;
             font-weight: 800;
             display: flex;
@@ -214,45 +249,44 @@
         }
 
         .account-title {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 900;
             color: #f8fafc;
-            margin: 8px 0;
-            line-height: 1.4;
+            margin: 6px 0;
+            line-height: 1.35;
         }
 
         .tags-container {
             display: flex;
-            gap: 6px;
+            gap: 4px;
             flex-wrap: wrap;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
         .cyber-tag {
             background: rgba(245, 158, 11, 0.08);
             border: 1px solid rgba(245, 158, 11, 0.2);
             color: #fbbf24;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 800;
-            padding: 2px 8px;
+            padding: 2px 6px;
             border-radius: 4px;
         }
 
         .card-action-bar {
             display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 8px;
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            grid-template-columns: 1fr 1.2fr;
+            gap: 6px;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.08);
         }
 
         .price-tag {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 900;
             color: #ff9e00;
-            text-shadow: 0 0 10px rgba(255, 158, 0, 0.3);
         }
     </style>
 </head>
@@ -262,67 +296,121 @@
         <div class="header-container">
             <div class="logo-box">
                 <div class="logo-icon">OP</div>
-                <span class="logo-title">OPBR VIP</span>
+                <span class="logo-title">OPBR.VIP</span>
             </div>
 
-            <a href="https://t.me/" target="_blank" class="btn-cyber-buy" style="padding: 7px 12px; font-size: 0.75rem;">
-                💬 الدعم الفني
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">الرئيسية</a>
+                <a href="#opbr" class="nav-link">بونتي راش</a>
+            </nav>
+
+            <a href="https://t.me/YOUR_ADMIN_USERNAME" target="_blank" class="btn-admin">
+                👑 الأدمن
             </a>
         </div>
     </header>
 
     <main>
-        <div class="section-banner">
-            <h2 style="font-size: 1.1rem; font-weight: 900;">🔥 أقوى الحسابات المتاحة حالياً</h2>
-            <p style="font-size: 0.7rem; color: #94a3b8;">تسليم فوري وآمن 100% مع الضمان الملكي</p>
+        <div class="custom-banner-slot">
+            <div class="banner-text-fallback">
+                <h3 style="font-size: 0.95rem; color: #f59e0b;">✨ المكان المخصص للبانر والإعلانات ✨</h3>
+                <p style="font-size: 0.7rem; color: #94a3b8; margin-top: 2px;">يمكنك إضافة أو حتي تغيير صورة الغلاف في أي وقت من هنا</p>
+            </div>
         </div>
 
-        <div class="cards-grid">
-            
-            <div class="cyber-card">
-                <div class="card-tag-head">
-                    <span class="badge-ex">4x EX ULTRA</span>
-                </div>
+        <section id="home">
+            <div class="section-banner">
+                <h2 style="font-size: 1rem; font-weight: 900;">🔥 العروض الممتازة (الرئيسية)</h2>
+            </div>
 
-                <div class="card-img-holder">
-                    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
-                        <rect width="100%" height="100%" fill="#0a0f18"/>
-                        <circle cx="300" cy="200" r="90" fill="#e85d04" opacity="0.2"/>
-                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'Orbitron', sans-serif" font-weight="900" font-size="28" fill="#ff9e00">LUFFY G5 EX</text>
-                    </svg>
-                </div>
-
-                <div class="card-content">
-                    <div class="account-code">
-                        <span>CODE: <strong style="color: #fff;">#OP-9082</strong></span>
-                        <span style="color: #22c55e;">✔ متوفر الآن</span>
+            <div class="cards-grid">
+                <div class="cyber-card">
+                    <div class="card-tag-head">
+                        <span class="badge-ex">4x EX ULTRA</span>
                     </div>
 
-                    <h3 class="account-title">حساب لوفي نيكا G5 + زورو الـ EX + كيد ولاو + روجر</h3>
-
-                    <div class="tags-container">
-                        <span class="cyber-tag">HB 34</span>
-                        <span class="cyber-tag">دعم 162%</span>
-                        <span class="cyber-tag">750+ Diamon</span>
+                    <div class="card-img-holder">
+                        <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+                            <rect width="100%" height="100%" fill="#0a0f18"/>
+                            <circle cx="300" cy="200" r="90" fill="#e85d04" opacity="0.2"/>
+                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'Orbitron', sans-serif" font-weight="900" font-size="28" fill="#ff9e00">LUFFY G5 EX</text>
+                        </svg>
                     </div>
 
-                    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px;">
-                        <span style="font-size: 0.65rem; color: #64748b; font-weight:800;">السعر المطلوب:</span>
-                        <div class="price-tag">$85</div>
-                    </div>
+                    <div class="card-content">
+                        <div class="account-code">
+                            <span>CODE: <strong style="color: #fff;">#OP-9082</strong></span>
+                            <span style="color: #22c55e;">✔ متوفر</span>
+                        </div>
 
-                    <div class="card-action-bar">
-                        <button onclick="alert('كود الحساب: OP-9082')" class="btn-cyber-info">
-                            🔍 التفاصيل
-                        </button>
-                        <a href="https://t.me/" target="_blank" class="btn-cyber-buy">
-                            ⚡ شراء الآن
-                        </a>
+                        <h3 class="account-title">حساب لوفي نيكا G5 + زورو الـ EX + كيد ولاو + روجر</h3>
+
+                        <div class="tags-container">
+                            <span class="cyber-tag">HB 34</span>
+                            <span class="cyber-tag">دعم 162%</span>
+                            <span class="cyber-tag">750+ Diamond</span>
+                        </div>
+
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px;">
+                            <span style="font-size: 0.6rem; color: #64748b; font-weight:800;">السعر:</span>
+                            <div class="price-tag">$85</div>
+                        </div>
+
+                        <div class="card-action-bar">
+                            <button onclick="alert('كود الحساب: OP-9082')" class="btn-cyber-info">🔍 التفاصيل</button>
+                            <a href="https://t.me/YOUR_ADMIN_USERNAME" target="_blank" class="btn-cyber-buy">⚡ شراء الآن</a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-        </div>
+        <section id="opbr" style="margin-top: 30px;">
+            <div class="section-banner">
+                <h2 style="font-size: 1rem; font-weight: 900;">⚔️ قسم حسابات بونتي راش (OPBR)</h2>
+            </div>
+
+            <div class="cards-grid">
+                <div class="cyber-card">
+                    <div class="card-tag-head">
+                        <span class="badge-ex" style="background:#f59e0b; color:#000;">REROLL</span>
+                    </div>
+
+                    <div class="card-img-holder">
+                        <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+                            <rect width="100%" height="100%" fill="#0a0f18"/>
+                            <circle cx="300" cy="200" r="90" fill="#8b5cf6" opacity="0.2"/>
+                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'Orbitron', sans-serif" font-weight="900" font-size="28" fill="#8b5cf6">5000+ DIAMONDS</text>
+                        </svg>
+                    </div>
+
+                    <div class="card-content">
+                        <div class="account-code">
+                            <span>CODE: <strong style="color: #fff;">#RD-4011</strong></span>
+                            <span style="color: #22c55e;">✔ متوفر</span>
+                        </div>
+
+                        <h3 class="account-title">حساب ريرول تجميع: 5200+ جوهرة + 500 فراغمنت ذهبي</h3>
+
+                        <div class="tags-container">
+                            <span class="cyber-tag">Fresh Solo</span>
+                            <span class="cyber-tag">Android / iOS</span>
+                        </div>
+
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px;">
+                            <span style="font-size: 0.6rem; color: #64748b; font-weight:800;">السعر:</span>
+                            <div class="price-tag">$22</div>
+                        </div>
+
+                        <div class="card-action-bar">
+                            <button onclick="alert('كود الحساب: RD-4011')" class="btn-cyber-info">🔍 التفاصيل</button>
+                            <a href="https://t.me/YOUR_ADMIN_USERNAME" target="_blank" class="btn-cyber-buy">⚡ شراء الآن</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
 </body>
