@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPBR VIP STORE - المتجر الملكي لبونتي راش</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;1000&family=Orbitron:wght@800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        opbr: {
+                            dark: '#07090e',
+                            card: '#0f131c',
+                            accent: '#f59e0b',
+                            gold: '#fbbf24',
+                            purple: '#8b5cf6',
+                            red: '#ef4444'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        orbitron: ['Orbitron', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #07090e; color: #fff; overflow-x: hidden; }
+        
+        /* Glassmorphism Effect */
+        .glass-panel {
+            background: rgba(15, 19, 28, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        /* Gold Neon Glow */
+        .glow-gold {
+            box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.4);
+        }
+        .glow-gold-hover:hover {
+            box-shadow: 0 0 35px 2px rgba(245, 158, 11, 0.6);
+        }
+        
+        /* Red Neon Glow */
+        .glow-red {
+            box-shadow: 0 0 25px -5px rgba(239, 68, 68, 0.4);
+        }
+        
+        /* Text Gradient */
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #fff5c0 0%, #f59e0b 50%, #b45309 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Background Animated Mesh */
+        .bg-mesh {
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(245, 158, 11, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.1) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col selection:bg-yellow-500 selection:text-black">
+
+    <div class="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 text-black text-xs md:text-sm font-black py-2 px-4 text-center tracking-wide flex items-center justify-center gap-3">
+        <span class="bg-black text-yellow-400 text-[10px] px-2 py-0.5 rounded-full uppercase">تحديث</span>
+        <span>🔥 خصم 20% لفترة محدودة على جميع حسابات الـ Extreme Hyperboost!</span>
+    </div>
+
+    <header class="sticky top-0 z-50 glass-panel border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <div class="flex items-center gap-3 cursor-pointer group">
+                <div class="w-12 h-12 bg-gradient-to-tr from-yellow-600 to-amber-400 rounded-2xl flex items-center justify-center font-orbitron font-black text-black text-2xl shadow-lg glow-gold group-hover:scale-105 transition duration-300">
+                    OP
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-black font-orbitron tracking-wider text-white">OPBR<span class="text-gradient-gold">.VIP</span></span>
+                    <span class="text-[10px] text-gray-400 -mt-1 tracking-widest uppercase">ULTIMATE STORE</span>
+                </div>
+            </div>
+
+            <nav class="hidden lg:flex items-center gap-8 font-bold text-sm text-gray-300">
+                <a href="#" class="text-yellow-400 flex items-center gap-2 border-b-2 border-yellow-400 pb-1"><i class="fa-solid fa-house text-xs"></i> الرئيسية</a>
+                <a href="#accounts" class="hover:text-yellow-400 transition flex items-center gap-2"><i class="fa-solid fa-gamepad text-xs"></i> الحسابات الممتازة</a>
+                <a href="#" class="hover:text-yellow-400 transition flex items-center gap-2"><i class="fa-solid fa-gem text-xs"></i> حسابات ريرول (RD)</a>
+                <a href="#" class="hover:text-yellow-400 transition flex items-center gap-2"><i class="fa-solid fa-shield-halved text-xs"></i> ضمان المتجر</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <button class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 flex items-center justify-center border border-white/10 text-gray-300 hover:text-white transition">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <a href="https://t.me/" target="_blank" class="hidden sm:flex bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-black px-5 py-2.5 rounded-xl items-center gap-2.5 transition duration-300 shadow-lg shadow-cyan-500/20 text-sm">
+                    <i class="fa-brands fa-telegram text-lg"></i>
+                    <span>قناة التليجرام</span>
+                </a>
+
+                <a href="#" class="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-black font-black px-5 py-2.5 rounded-xl flex items-center gap-2 transition duration-300 glow-gold glow-gold-hover text-sm">
+                    <i class="fa-solid fa-plus-circle text-base"></i>
+                    <span>بيع حسابك</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative py-20 px-4 sm:px-6 lg:px-8 border-b border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div class="space-y-6 text-center lg:text-right">
+                <div class="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/30 px-4 py-1.5 rounded-full">
+                    <i class="fa-solid fa-crown text-yellow-400 text-xs"></i>
+                    <span class="text-xs font-bold text-yellow-400">المتجر رقم #1 لبيع وثاق حسابات OPBR</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl font-black text-white leading-tight">
+                    امتلك أقوى شخصيات <br>
+                    <span class="text-gradient-gold">EX EXTREME</span> بنقرة واحدة
+                </h1>
+
+                <p class="text-gray-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-medium leading-relaxed">
+                    نوفر لك حسابات مشحونة، هايبر بوست متقدم، ونسب دعم قياسية مع نقل ملكية آمن 100% وبشكل فوري.
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#accounts" class="bg-gradient-to-r from-yellow-500 via-amber-500 to-yellow-600 hover:scale-105 text-black font-black px-8 py-4 rounded-2xl flex items-center gap-3 transition duration-300 glow-gold text-base">
+                        <i class="fa-solid fa-fire text-lg"></i>
+                        <span>تصفح الحسابات المتاحة</span>
+                    </a>
+                    
+                    <a href="#" class="glass-panel hover:bg-white/10 text-white font-bold px-7 py-4 rounded-2xl flex items-center gap-3 border border-white/15 transition duration-300 text-base">
+                        <i class="fa-solid fa-shield-check text-yellow-400 text-lg"></i>
+                        <span>كيف نضمن حقك؟</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="absolute -inset-1 bg-gradient-to-r from-yellow-500 to-purple-600 rounded-3xl blur-2xl opacity-30"></div>
+                <div class="relative glass-panel rounded-3xl p-6 border border-white/10 space-y-6">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-3 h-3 bg-red-500 rounded-full animate-ping"></span>
+                            <span class="text-sm font-bold text-gray-300">عرض حصري خارق</span>
+                        </div>
+                        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 text-xs font-bold px-3 py-1 rounded-full">TOP ACCOUNT</span>
+                    </div>
+                    
+                    <div class="relative rounded-2xl overflow-hidden group">
+                        <img src="https://via.placeholder.com/700x400/151923/fbbf24?text=ONE+PIECE+BOUNTY+RUSH+VIP" alt="VIP Account" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 right-4 left-4 flex justify-between items-end">
+                            <div>
+                                <span class="bg-yellow-500 text-black text-[10px] font-black px-2.5 py-1 rounded-md mb-1 inline-block uppercase">MAX LVL 100</span>
+                                <h4 class="text-xl font-black text-white">G5 LUFFY + ROGER V2 + SHANKS</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-3 text-center">
+                        <div class="bg-black/40 p-3 rounded-xl border border-white/5">
+                            <div class="text-xs text-gray-400">الدعم (Support)</div>
+                            <div class="text-lg font-black text-yellow-400">168.4%</div>
+                        </div>
+                        <div class="bg-black/40 p-3 rounded-xl border border-white/5">
+                            <div class="text-xs text-gray-400">الهايبر بوست</div>
+                            <div class="text-lg font-black text-yellow-400">HB 52</div>
+                        </div>
+                        <div class="bg-black/40 p-3 rounded-xl border border-white/5">
+                            <div class="text-xs text-gray-400">المداليات</div>
+                            <div class="text-lg font-black text-yellow-400">9★ Full set</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <main id="accounts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-1 w-full space-y-10">
+        
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 glass-panel p-6 rounded-3xl border border-white/10">
+            <div>
+                <h2 class="text-2xl font-black text-white flex items-center gap-3">
+                    <i class="fa-solid fa-layer-group text-yellow-400"></i>
+                    <span>معرض الحسابات الجاهزة</span>
+                </h2>
+                <p class="text-gray-400 text-xs mt-1">فلتر وتصفح الحسابات المتوفرة للبيع الفوري</p>
+            </div>
+            
+            <div class="flex flex-wrap items-center gap-2">
+                <button class="bg-gradient-to-r from-yellow-500 to-amber-600 text-black font-black px-5 py-2.5 rounded-xl text-xs glow-gold transition">
+                    <i class="fa-solid fa-border-all"></i> الكل (24)
+                </button>
+                <button class="bg-white/5 hover:bg-white/10 text-gray-300 font-bold px-5 py-2.5 rounded-xl text-xs border border-white/10 transition">
+                    🔥 EX 4+ شخصيات
+                </button>
+                <button class="bg-white/5 hover:bg-white/10 text-gray-300 font-bold px-5 py-2.5 rounded-xl text-xs border border-white/10 transition">
+                    💎 حسابات جواهر (Reroll)
+                </button>
+                <button class="bg-white/5 hover:bg-white/10 text-gray-300 font-bold px-5 py-2.5 rounded-xl text-xs border border-white/10 transition">
+                    ⚡ Hyperboost عالي
+                </button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="glass-panel rounded-3xl border border-white/10 overflow-hidden hover:border-yellow-500/60 transition duration-300 flex flex-col group relative">
+                <div class="absolute top-4 right-4 z-10 flex gap-2">
+                    <span class="bg-red-600 text-white font-black text-[10px] px-3 py-1 rounded-full uppercase shadow-lg glow-red">
+                        <i class="fa-solid fa-fire"></i> 4x EX
+                    </span>
+                    <span class="bg-black/70 backdrop-blur-md text-yellow-400 border border-yellow-500/40 font-bold text-[10px] px-3 py-1 rounded-full">
+                        RANK 68
+                    </span>
+                </div>
+
+                <div class="relative h-56 bg-gray-900 overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400/10141d/fbbf24?text=ACCOUNT+ID+%239082" alt="OPBR Account" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-opbr-card via-transparent to-transparent"></div>
+                </div>
+
+                <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>كود الحساب: <strong class="text-white">#OP-9082</strong></span>
+                            <span class="text-emerald-400 font-bold flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> ربط آمن</span>
+                        </div>
+
+                        <h3 class="text-xl font-black text-white leading-snug group-hover:text-yellow-400 transition">
+                            حساب أسطوري: لوفي نيكا + روجر + زورو الـ EX + كيد ولاو
+                        </h3>
+
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <span class="bg-white/5 border border-white/10 text-gray-300 text-[11px] px-2.5 py-1 rounded-lg">HB 34</span>
+                            <span class="bg-white/5 border border-white/10 text-gray-300 text-[11px] px-2.5 py-1 rounded-lg">دعم أحمر 162%</span>
+                            <span class="bg-white/5 border border-white/10 text-gray-300 text-[11px] px-2.5 py-1 rounded-lg">750+ diamond</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 pt-4 border-t border-white/10">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-[10px] text-gray-400 uppercase tracking-wider block">السعر المطلوب</span>
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-3xl font-black text-yellow-400 font-orbitron">$85</span>
+                                    <span class="text-xs text-gray-500 line-through font-orbitron">$110</span>
+                                </div>
+                            </div>
+                            
+                            <button class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/15 flex items-center justify-center border border-white/10 text-gray-300 transition" title="معاينة صور الحساب">
+                                <i class="fa-solid fa-images"></i>
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2 pt-1">
+                            <button class="bg-white/5 hover:bg-white/10 text-white font-bold py-3 px-4 rounded-xl text-xs border border-white/10 transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>التفاصيل</span>
+                            </button>
+                            
+                            <a href="https://t.me/" target="_blank" class="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-black font-black py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg glow-gold">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>شراء الآن</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-3xl border border-white/10 overflow-hidden hover:border-yellow-500/60 transition duration-300 flex flex-col group relative">
+                <div class="absolute top-4 right-4 z-10 flex gap-2">
+                    <span class="bg-yellow-500 text-black font-black text-[10px] px-3 py-1 rounded-full uppercase shadow-lg">
+                        <i class="fa-solid fa-gem"></i> REROLL STARTER
+                    </span>
+                </div>
+
+                <div class="relative h-56 bg-gray-900 overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400/10141d/8b5cf6?text=5000%2B+DIAMONDS" alt="OPBR Account" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-opbr-card via-transparent to-transparent"></div>
+                </div>
+
+                <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>كود الحساب: <strong class="text-white">#RD-4011</strong></span>
+                            <span class="text-yellow-400 font-bold flex items-center gap-1"><i class="fa-solid fa-bolt"></i> تسليم آلي</span>
+                        </div>
+
+                        <h3 class="text-xl font-black text-white leading-snug group-hover:text-yellow-400 transition">
+                            حساب تجميع: 5200+ جوهرة + 500 فراغمنت ذهبي
+                        </h3>
+
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <span class="bg-white/5 border border-white/10 text-gray-300 text-[11px] px-2.5 py-1 rounded-lg">Android / iOS</span>
+                            <span class="bg-white/5 border border-white/10 text-gray-300 text-[11px] px-2.5 py-1 rounded-lg">Level 1 Solo Fresh</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 pt-4 border-t border-white/10">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-[10px] text-gray-400 uppercase tracking-wider block">السعر المطلوب</span>
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-3xl font-black text-yellow-400 font-orbitron">$22</span>
+                                </div>
+                            </div>
+                            
+                            <button class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/15 flex items-center justify-center border border-white/10 text-gray-300 transition">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2 pt-1">
+                            <button class="bg-white/5 hover:bg-white/10 text-white font-bold py-3 px-4 rounded-xl text-xs border border-white/10 transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>التفاصيل</span>
+                            </button>
+                            
+                            <a href="https://t.me/" target="_blank" class="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-black font-black py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg glow-gold">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>شراء الآن</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-3xl border border-white/10 overflow-hidden hover:border-yellow-500/60 transition duration-300 flex flex-col group relative">
+                <div class="absolute top-4 right-4 z-10 flex gap-2">
+                    <span class="bg-purple-600 text-white font-black text-[10px] px-3 py-1 rounded-full uppercase shadow-lg">
+                        <i class="fa-solid fa-bolt"></i> HB 70+
+                    </span>
+                </div>
+
+                <div class="relative h-56 bg-gray-900 overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400/10141d/ef4444?text=HYPERBOOST+ACCOUNT" alt="OPBR Account" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-opbr-card via-transparent to-transparent"></div>
+                </div>
+
+                <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>كود الحساب: <strong class="text-white">#HB-1090</strong></span>
+                            <span class="text-emerald-400 font-bold flex items-center gap-1"><i class="fa-solid fa-shield"></i> موثوق 100%</span>
+                        </div>
+
+                        <h3 class="text-xl font-black text-white leading-snug group-hover:text-yellow-400 transition">
+                            حساب تصنيف متقدم: هايبر بوست 72 + شانكس الأحمر وروجير
+                        </h3>
+
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <span class="bg-white/5 border border-white/10 text-gray-300 text-[11px] px-2.5 py-1 rounded-lg">دعم 169.2%</span>
+                            <span class="bg-white/5 border border-white/10 text-gray-300 text-[11px] px-2.5 py-1 rounded-lg">اللقب: Championship Champion</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 pt-4 border-t border-white/10">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-[10px] text-gray-400 uppercase tracking-wider block">السعر المطلوب</span>
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-3xl font-black text-yellow-400 font-orbitron">$140</span>
+                                </div>
+                            </div>
+                            
+                            <button class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/15 flex items-center justify-center border border-white/10 text-gray-300 transition">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2 pt-1">
+                            <button class="bg-white/5 hover:bg-white/10 text-white font-bold py-3 px-4 rounded-xl text-xs border border-white/10 transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>التفاصيل</span>
+                            </button>
+                            
+                            <a href="https://t.me/" target="_blank" class="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-black font-black py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg glow-gold">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>شراء الآن</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="lg:hidden fixed bottom-4 left-4 right-4 z-50 glass-panel p-3 rounded-2xl border border-white/20 flex items-center justify-between shadow-2xl">
+        <div class="flex items-center gap-3">
+            <div class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></div>
+            <span class="text-xs font-bold text-white">الدعم الفني متواجد الآن</span>
+        </div>
+        <a href="https://t.me/" target="_blank" class="bg-yellow-500 text-black font-black text-xs px-4 py-2 rounded-xl glow-gold">
+            تواصل تليجرام <i class="fa-brands fa-telegram"></i>
+        </a>
+    </div>
+
+    <footer class="glass-panel border-t border-white/10 py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-6">
+            <div class="flex items-center justify-center gap-3">
+                <div class="w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center font-orbitron font-black text-black">OP</div>
+                <span class="text-xl font-black font-orbitron text-white">OPBR.VIP</span>
+            </div>
+            <p class="text-gray-400 text-xs max-w-md mx-auto">
+                الموقع الأفضل والأكثر أماناً لشراء وتداول حسابات One Piece Bounty Rush في الوطن العربي.
+            </p>
+            <p class="text-gray-600 text-xs">© 2026 OPBR VIP STORE. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
