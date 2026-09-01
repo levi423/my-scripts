@@ -1,0 +1,1032 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>محمد — رسالة لا تتكرر</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet"><style>
+
+/* =========================================
+   NENO — LUXURY FRIENDSHIP EXPERIENCE
+========================================= */
+
+:root{
+    --bg:#030307;
+    --purple:#8b5cf6;
+    --pink:#ec4899;
+    --blue:#38bdf8;
+    --white:#ffffff;
+    --glass:rgba(255,255,255,.055);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Cairo",sans-serif;
+    background:var(--bg);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================================
+   ANIMATED BACKGROUND
+========================================= */
+
+.bg{
+    position:fixed;
+    inset:0;
+    z-index:-10;
+    overflow:hidden;
+    background:#030307;
+}
+
+.orb{
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    filter:blur(100px);
+    opacity:.25;
+    animation:move 15s infinite alternate ease-in-out;
+}
+
+.orb.one{
+    background:var(--purple);
+    top:-200px;
+    right:-100px;
+}
+
+.orb.two{
+    background:var(--pink);
+    bottom:-250px;
+    left:-150px;
+    animation-delay:-5s;
+}
+
+.orb.three{
+    background:var(--blue);
+    top:40%;
+    left:40%;
+    width:300px;
+    height:300px;
+    animation-delay:-8s;
+}
+
+@keyframes move{
+
+    0%{
+        transform:translate(0,0) scale(1);
+    }
+
+    100%{
+        transform:translate(120px,80px) scale(1.3);
+    }
+
+}
+
+/* GRID */
+
+.grid{
+    position:fixed;
+    inset:0;
+    z-index:-5;
+
+    background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+
+    background-size:55px 55px;
+
+    mask-image:
+    radial-gradient(circle at center,black,transparent 75%);
+}
+
+/* =========================================
+   MOUSE GLOW
+========================================= */
+
+.cursor-glow{
+    position:fixed;
+
+    width:350px;
+    height:350px;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    background:
+    radial-gradient(circle,
+    rgba(139,92,246,.13),
+    transparent 65%);
+
+    transform:translate(-50%,-50%);
+
+    z-index:-1;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.hero-content{
+
+    max-width:1000px;
+
+}
+
+.top-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 20px;
+
+    border-radius:100px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:#aaa;
+
+    font-size:13px;
+
+    opacity:0;
+
+    animation:fadeUp 1s forwards;
+
+}
+
+.dot{
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#8b5cf6;
+
+    box-shadow:
+    0 0 10px #8b5cf6,
+    0 0 25px #8b5cf6;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    50%{
+        transform:scale(1.7);
+        opacity:.5;
+    }
+
+}
+
+/* =========================================
+   NAME
+========================================= */
+
+.hero h1{
+
+    margin-top:30px;
+
+    font-size:
+    clamp(65px,14vw,170px);
+
+    font-weight:900;
+
+    line-height:1;
+
+    letter-spacing:-5px;
+
+}
+
+.letter{
+
+    display:inline-block;
+
+    opacity:0;
+
+    transform:
+    translateY(80px)
+    rotate(10deg);
+
+    animation:
+    letterIn .9s forwards;
+
+}
+
+.letter:nth-child(1){
+    animation-delay:.4s;
+}
+
+.letter:nth-child(2){
+    animation-delay:.55s;
+}
+
+.letter:nth-child(3){
+    animation-delay:.7s;
+}
+
+.letter:nth-child(4){
+    animation-delay:.85s;
+}
+
+@keyframes letterIn{
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        rotate(0);
+
+    }
+
+}
+
+.name{
+
+    background:
+    linear-gradient(
+        90deg,
+        #38bdf8,
+        #8b5cf6,
+        #ec4899,
+        #ffffff,
+        #38bdf8
+    );
+
+    background-size:400%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:
+    gradientMove 6s linear infinite;
+
+    filter:
+    drop-shadow(0 0 20px rgba(139,92,246,.3));
+
+}
+
+@keyframes gradientMove{
+
+    to{
+        background-position:400%;
+    }
+
+}
+
+.subtitle{
+
+    margin-top:35px;
+
+    font-size:
+    clamp(16px,2.5vw,22px);
+
+    color:#aaa;
+
+    line-height:2;
+
+    opacity:0;
+
+    animation:
+    fadeUp 1s 1.3s forwards;
+
+}
+
+/* =========================================
+   START BUTTON
+========================================= */
+
+.start{
+
+    margin-top:45px;
+
+    padding:18px 38px;
+
+    border-radius:100px;
+
+    border:1px solid
+    rgba(139,92,246,.4);
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(139,92,246,.18),
+        rgba(236,72,153,.12)
+    );
+
+    color:white;
+
+    font-family:"Cairo";
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    opacity:0;
+
+    animation:
+    fadeUp 1s 1.7s forwards;
+
+}
+
+.start:hover{
+
+    transform:
+    translateY(-6px)
+    scale(1.04);
+
+    box-shadow:
+
+    0 10px 40px
+    rgba(139,92,246,.25),
+
+    0 0 60px
+    rgba(236,72,153,.15);
+
+}
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.container{
+
+    width:min(1050px,92%);
+
+    margin:auto;
+
+    padding-bottom:120px;
+
+}
+
+.title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.title small{
+
+    color:#8b5cf6;
+
+    letter-spacing:4px;
+
+}
+
+.title h2{
+
+    margin-top:12px;
+
+    font-size:
+    clamp(35px,5vw,60px);
+
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.card{
+
+    position:relative;
+
+    padding:40px;
+
+    margin:25px 0;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.02)
+    );
+
+    border:
+    1px solid
+    rgba(255,255,255,.08);
+
+    backdrop-filter:
+    blur(20px);
+
+    overflow:hidden;
+
+    opacity:0;
+
+    transform:
+    translateY(70px)
+    scale(.96);
+
+    transition:
+    .8s cubic-bezier(.2,.8,.2,1);
+
+}
+
+.card.show{
+
+    opacity:1;
+
+    transform:
+    translateY(0)
+    scale(1);
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    background:
+
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(139,92,246,.3),
+        transparent
+    );
+
+    opacity:0;
+
+    transition:.5s;
+
+}
+
+.card:hover::before{
+
+    opacity:1;
+
+}
+
+.card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.01);
+
+    border-color:
+    rgba(139,92,246,.4);
+
+    box-shadow:
+
+    0 20px 80px
+    rgba(0,0,0,.5),
+
+    0 0 50px
+    rgba(139,92,246,.08);
+
+}
+
+.card-number{
+
+    color:#8b5cf6;
+
+    letter-spacing:3px;
+
+    font-size:12px;
+
+    margin-bottom:15px;
+
+}
+
+.card h3{
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+}
+
+.card p{
+
+    color:#b8b8b8;
+
+    line-height:2.2;
+
+    font-size:17px;
+
+}
+
+/* =========================================
+   FINAL EXPERIENCE
+========================================= */
+
+.final{
+
+    margin-top:70px;
+
+    text-align:center;
+
+    padding:80px 30px;
+
+    border-radius:40px;
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        rgba(139,92,246,.18),
+        transparent 60%
+    ),
+
+    rgba(255,255,255,.03);
+
+    border:
+    1px solid
+    rgba(139,92,246,.25);
+
+}
+
+.crown{
+
+    font-size:55px;
+
+    animation:
+    crownFloat 3s infinite ease-in-out;
+
+}
+
+@keyframes crownFloat{
+
+    50%{
+        transform:
+        translateY(-12px)
+        rotate(5deg);
+    }
+
+}
+
+.final h2{
+
+    margin-top:20px;
+
+    font-size:
+    clamp(45px,7vw,85px);
+
+}
+
+.final p{
+
+    max-width:750px;
+
+    margin:30px auto;
+
+    color:#bbb;
+
+    line-height:2.3;
+
+    font-size:18px;
+
+}
+
+/* =========================================
+   SECRET BUTTON
+========================================= */
+
+.secret-btn{
+
+    position:relative;
+
+    padding:20px 45px;
+
+    border:none;
+
+    border-radius:100px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #8b5cf6,
+        #ec4899
+    );
+
+    color:white;
+
+    font-family:"Cairo";
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+}
+
+.secret-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.4),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.7s;
+
+}
+
+.secret-btn:hover::before{
+
+    left:150%;
+
+}
+
+.secret-btn:hover{
+
+    transform:
+    scale(1.08);
+
+    box-shadow:
+
+    0 0 30px
+    rgba(139,92,246,.5),
+
+    0 0 80px
+    rgba(236,72,153,.3);
+
+}
+
+/* =========================================
+   SECRET
+========================================= */
+
+.secret{
+
+    max-height:0;
+
+    opacity:0;
+
+    overflow:hidden;
+
+    margin-top:0;
+
+    transition:.8s;
+
+}
+
+.secret.show{
+
+    max-height:600px;
+
+    opacity:1;
+
+    margin-top:35px;
+
+}
+
+.secret-box{
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:
+    1px solid
+    rgba(255,255,255,.1);
+
+    line-height:2.3;
+
+    color:#ddd;
+
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    color:#555;
+
+    font-size:13px;
+
+}
+
+footer b{
+
+    color:#8b5cf6;
+
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:600px){
+
+    .card{
+
+        padding:28px 22px;
+
+        border-radius:25px;
+
+    }
+
+    .card h3{
+
+        font-size:22px;
+
+    }
+
+    .card p{
+
+        font-size:15px;
+
+    }
+
+    .final{
+
+        padding:55px 20px;
+
+    }
+
+    .cursor-glow{
+
+        display:none;
+
+    }
+
+}
+
+</style></head><body><!-- BACKGROUND --><div class="bg"><div class="orb one"></div>
+<div class="orb two"></div>
+<div class="orb three"></div></div><div class="grid"></div><!-- MOUSE GLOW --><div class="cursor-glow" id="glow"></div><!-- HERO --><section class="hero"><div class="hero-content"><div class="top-badge"><span class="dot"></span>
+
+رسالة خاصة لشخص مميز
+
+</div><h1 class="name"><span class="letter">م</span>
+<span class="letter">ح</span>
+<span class="letter">م</span>
+<span class="letter">د</span>
+
+</h1><p class="subtitle">في ناس بنقابلهم عادي…
+وفي ناس وجودهم بيبقى جزء من أحلى الذكريات.
+
+</p><button class="start"
+
+onclick="document.querySelector('.container').scrollIntoView({behavior:'smooth'})">
+
+ابدأ الرحلة ↓
+
+</button></div></section><!-- CONTENT --><main class="container"><div class="title"><small>FOR MOHAMED</small>
+
+<h2>بص يا محمد… ❤️</h2></div><div class="card reveal"><div class="card-number">01 / البداية
+
+</div><h3>مش مجرد كلام</h3><p>الموقع ده مش معمول صدفة.
+
+أنا حبيت أعمل حاجة مختلفة،
+حاجة تفتحها وتحس إن في حد قعد وفكر
+إزاي يعملك حاجة مخصوص.
+
+مش كل الناس تستاهل مجهود،
+بس في ناس وجودهم يستاهل كل حاجة حلوة.
+
+</p></div><div class="card reveal"><div class="card-number">02 / الصحاب
+
+</div><h3>يا صاحبي الجدع 🤝</h3><p>الصحاب الحقيقيين مش بيتحسبوا بعدد الصور،
+ولا بعدد الخروجات.
+
+بيتقاسوا بالضحك،
+بالمواقف،
+وبالحاجات اللي محدش غيركم فاهمها 😂
+
+والأجمل إن الواحد يلاقي حد
+يقدر يكون معاه على طبيعته.
+
+</p></div><div class="card reveal"><div class="card-number">03 / الحقيقة
+
+</div><h3>خليك زي ما إنت 🔥</h3><p>مش لازم تبقى زي حد.
+
+ولا تغير نفسك عشان ترضي الناس.
+
+خليك محمد…
+بطريقتك،
+بشخصيتك،
+وبكل الحاجات اللي بتخليك مختلف.
+
+لأن النسخة الأصلية دايمًا أحسن من التقليد 👑
+
+</p></div><div class="card reveal"><div class="card-number">04 / الأيام الجاية
+
+</div><h3>لسه في كتير قدامك 🚀</h3><p>يمكن دلوقتي مش شايف كل حاجة واضحة،
+بس قدامك وقت كبير تعمل فيه حاجات عظيمة.
+
+كل حاجة حلوة بتبدأ بخطوة.
+
+فـ كمل،
+اتعلم،
+اغلط،
+قوم تاني…
+
+المهم متقفش.
+
+</p></div><section class="final"><div class="crown">👑</div><h2>إلى <span class="name">محمد</span>
+
+</h2><p>أنا حبيت أعملك أفضل حاجة أقدر عليها.
+
+مش عشان مناسبة،
+ولا عشان سبب معين.
+
+بس عشان الصاحب الغالي
+مش محتاج مناسبة عشان يعرف
+إنه ليه مكانة ❤️
+
+</p><button class="secret-btn" onclick="openSecret()">اضغط هنا يا محمد 👀✨
+
+</button><div class="secret" id="secret"><div class="secret-box">🔥❤️
+
+يا محمد…
+
+لو وصلت لحد هنا،
+يبقى دي آخر رسالة.
+
+أنا بجد بتمنى أشوفك دايمًا مبسوط،
+وتحقق كل اللي نفسك فيه،
+وتعيش أيام أحلى من اللي فاتت.
+
+وخليك فاكر حاجة مهمة جدًا…
+
+<strong>إنت مش مجرد شخص عادي،
+إنت صاحبي ❤️🤝
+
+</strong><br><br>
+
+والصفحة دي هتفضل ذكرى بسيطة،
+بس معمولة بمحبة كبيرة جدًا 👑✨
+
+</div></div></section></main><footer>Made with ❤️ especially for <b>محمد</b>
+
+</footer><script>
+
+
+/* =====================================
+   MOUSE GLOW
+===================================== */
+
+const glow =
+document.getElementById("glow");
+
+document.addEventListener("mousemove",(e)=>{
+
+glow.style.left =
+e.clientX + "px";
+
+glow.style.top =
+e.clientY + "px";
+
+});
+
+
+/* =====================================
+   SCROLL REVEAL
+===================================== */
+
+const elements =
+document.querySelectorAll(".reveal");
+
+
+const observer =
+new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:.15
+});
+
+
+elements.forEach(el=>observer.observe(el));
+
+
+/* =====================================
+   SECRET MESSAGE
+===================================== */
+
+function openSecret(){
+
+const secret =
+document.getElementById("secret");
+
+secret.classList.toggle("show");
+
+if(secret.classList.contains("show")){
+
+setTimeout(()=>{
+
+secret.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+},300);
+
+}
+
+}
+
+
+</script></body>
+</html>
